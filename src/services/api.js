@@ -16,12 +16,9 @@ api.interceptors.request.use(
     }
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
-// Interceptor para tratar erros de autenticação
 api.interceptors.response.use(
   (response) => response,
   (error) => {
